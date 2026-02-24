@@ -108,18 +108,23 @@ The training pipeline is implemented in the model script  which prepares the dat
 
 <a id="dataset-preparation"></a>
 
+<a id="dataset-preparation"></a>
+
 ## 📂 Dataset Preparation
 
-Before training the model, the raw dataset is processed using annotation files.
+The dataset used for training was collected from Kaggle and then preprocessed for this project.
 
-Steps include:
+Since the raw dataset contained annotated images, a custom preprocessing script was used to:
 
-* Reading XML annotation files
-* Extracting face regions
-* Mapping labels into two categories
-* Saving cropped faces into structured folders
+* Read XML annotation files
+* Extract face regions using bounding box coordinates
+* Convert multiple labels into two categories:
 
-Output folder structure:
+  * with_mask
+  * without_mask
+* Save cropped face images into structured folders for training
+
+Final dataset structure:
 
 ```
 dataset/
@@ -127,7 +132,9 @@ dataset/
     without_mask/
 ```
 
-<a id="model-training"></a>
+Dataset Source: Kaggle (Face Mask Detection Dataset)
+
+Note: The dataset was cleaned and reorganized specifically for this project to improve training performance.
 
 ## 🤖 Model Training
 
