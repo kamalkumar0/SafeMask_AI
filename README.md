@@ -77,7 +77,7 @@ When the application starts:
 * Each detected face is preprocessed and passed to the model
 * Prediction results are displayed with bounding boxes
 
-The training pipeline is implemented in the model script  which prepares the dataset, applies augmentation, trains MobileNetV2, and saves the model.
+The training pipeline prepares the dataset, applies augmentation, trains MobileNetV2, and saves the final model for deployment.
 
 <a id="tech-stack"></a>
 
@@ -108,8 +108,6 @@ The training pipeline is implemented in the model script  which prepares the dat
 
 <a id="dataset-preparation"></a>
 
-<a id="dataset-preparation"></a>
-
 ## 📂 Dataset Preparation
 
 The dataset used for training was collected from Kaggle and then preprocessed for this project.
@@ -135,6 +133,8 @@ dataset/
 Dataset Source: Kaggle (Face Mask Detection Dataset)
 
 Note: The dataset was cleaned and reorganized specifically for this project to improve training performance.
+
+<a id="model-training"></a>
 
 ## 🤖 Model Training
 
@@ -218,5 +218,7 @@ Some possible enhancements:
 
 Kamal Kumar
 B.Tech CSE Student
+
+🔗 LinkedIn: https://www.linkedin.com/in/kamalkumar0
 
 If you found this project useful, feel free to connect or share feedback.
